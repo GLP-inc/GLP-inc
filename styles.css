@@ -8,7 +8,7 @@
 
 /* Body style */
 body {
-    background-color: #51C8E6;
+    background: linear-gradient(135deg, #660000, #300000); /* Shiny ruby red gradient */
     color: white;
     display: flex;
     flex-direction: column;
@@ -16,6 +16,21 @@ body {
     justify-content: center;
     height: 100vh;
     overflow: hidden;
+    background-size: 200% 200%; /* For the shine effect */
+    animation: shine 10s infinite; /* Animation for shine effect */
+}
+
+/* Shine effect animation */
+@keyframes shine {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
 }
 
 /* Dark Space Black Top bar styling */
