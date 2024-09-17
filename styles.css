@@ -37,18 +37,32 @@ body {
 /* Title styling */
 .website-title {
     font-size: 2.5rem;
-    color: #93d5ff;
+    color: #FFA500; /* Bright orange color */
     text-transform: uppercase;
     font-weight: bold;
-    text-shadow: 0 0 20px #00b4ff, 0 0 30px #00b4ff, 0 0 40px #00b4ff;
+    text-shadow: 0 0 20px #FFA500, 0 0 30px #FFA500, 0 0 40px #FFA500;
     transition: text-shadow 0.5s, color 0.5s;
-    background: linear-gradient(145deg, #7eb8e6, #5ca1d3);
+    background: linear-gradient(145deg, #FFD700, #FFA500);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: twistMove 3s infinite; /* Added animation */
+}
+
+/* Animation for twisting and moving */
+@keyframes twistMove {
+    0% {
+        transform: rotate(0deg) translateY(0);
+    }
+    50% {
+        transform: rotate(5deg) translateY(-10px);
+    }
+    100% {
+        transform: rotate(0deg) translateY(0);
+    }
 }
 
 .website-title:hover {
-    text-shadow: 0 0 40px #ffffff, 0 0 50px #00b4ff, 0 0 70px #00b4ff;
+    text-shadow: 0 0 40px #ffffff, 0 0 50px #FFA500, 0 0 70px #FFA500;
 }
 
 /* Search bar styling */
