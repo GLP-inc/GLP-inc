@@ -28,6 +28,7 @@ body {
     justify-content: space-between;
     padding: 0 20px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    z-index: 10;
 }
 
 /* Title Styling (GL Promotions) */
@@ -37,6 +38,7 @@ body {
     font-family: 'hHangus', sans-serif;
     text-shadow: 0px 0px 15px rgba(255, 69, 0, 0.6);
     margin: 0;
+    position: relative;
 }
 
 /* Search Bar */
@@ -51,7 +53,6 @@ body {
     font-size: 1rem;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
     transition: box-shadow 0.3s;
-    margin-right: 10px; /* Adjust this value to move it slightly to the left */
 }
 
 /* Dropdown Menu (Three Lines) */
@@ -59,10 +60,10 @@ body {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    position: absolute; /* Positioned to the left of the search bar */
-    top: 50%; /* Center vertically relative to the search bar */
+    position: absolute; /* Positioned relative to the title */
+    top: 50%; /* Center vertically relative to the title */
     transform: translateY(-50%); /* Center align */
-    left: 190px; /* Adjusted to be right next to the search bar */
+    left: calc(100% + 10px); /* Move to the end of the title */
     z-index: 100; /* Ensure it stays on top */
 }
 
@@ -111,11 +112,11 @@ body {
 }
 
 .artists-tab {
-    top: 90px; /* Position closer to the top bar */
+    top: 100px; /* Position closer to the top bar */
 }
 
 .concert-tickets-tab {
-    top: 150px; /* Positioned under Artists tab */
+    top: 160px; /* Positioned under Artists tab */
 }
 
 /* Barbed wire effect for the tabs */
