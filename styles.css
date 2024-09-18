@@ -58,10 +58,10 @@ body {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    position: absolute; /* Change to absolute for more precise positioning */
-    top: 50%; /* Adjust to vertically center if needed */
+    position: absolute; /* Positioned to the left of the search bar */
+    top: 50%; /* Center vertically relative to the search bar */
     transform: translateY(-50%); /* Center align */
-    left: 220px; /* Position to the left of the search bar */
+    left: 180px; /* Adjust as needed */
     z-index: 100; /* Ensure it stays on top */
 }
 
