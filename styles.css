@@ -35,7 +35,7 @@ body {
 /* Glowing Jewel Effect for Title */
 .website-title {
     font-size: 2rem; /* Adjusted for responsiveness */
-    color: #00bcd4; /* Cyan blue color */
+    color: #FF5733; /* Ruby red mixed with orange */
     text-transform: uppercase;
     font-weight: bold;
     margin: 0;
@@ -44,41 +44,41 @@ body {
     display: inline-block;
     animation: shimmer 1.5s infinite;
     text-shadow: 
-        0 0 10px rgba(255, 255, 255, 0.5), 
-        0 0 20px rgba(255, 255, 255, 0.5),
-        0 0 30px rgba(255, 255, 255, 0.5), 
-        0 0 40px rgba(0, 188, 212, 0.5),
-        0 0 50px rgba(0, 188, 212, 0.5),
-        0 0 75px rgba(0, 188, 212, 0.5);
+        0 0 10px rgba(255, 87, 51, 0.7), /* Ruby red */
+        0 0 20px rgba(255, 87, 51, 0.7), 
+        0 0 30px rgba(255, 87, 51, 0.7),
+        0 0 40px rgba(255, 105, 45, 0.7), /* Orange */
+        0 0 50px rgba(255, 105, 45, 0.7),
+        0 0 75px rgba(255, 105, 45, 0.7);
 }
 
 @keyframes shimmer {
     0% {
         text-shadow: 
-            0 0 10px rgba(255, 255, 255, 0.5),
-            0 0 20px rgba(255, 255, 255, 0.5),
-            0 0 30px rgba(255, 255, 255, 0.5),
-            0 0 40px rgba(0, 188, 212, 0.5),
-            0 0 50px rgba(0, 188, 212, 0.5),
-            0 0 75px rgba(0, 188, 212, 0.5);
+            0 0 10px rgba(255, 87, 51, 0.7), /* Ruby red */
+            0 0 20px rgba(255, 87, 51, 0.7), 
+            0 0 30px rgba(255, 87, 51, 0.7),
+            0 0 40px rgba(255, 105, 45, 0.7), /* Orange */
+            0 0 50px rgba(255, 105, 45, 0.7),
+            0 0 75px rgba(255, 105, 45, 0.7);
     }
     50% {
         text-shadow: 
-            0 0 15px rgba(255, 255, 255, 0.7),
-            0 0 25px rgba(255, 255, 255, 0.7),
-            0 0 35px rgba(255, 255, 255, 0.7),
-            0 0 45px rgba(0, 188, 212, 0.7),
-            0 0 55px rgba(0, 188, 212, 0.7),
-            0 0 85px rgba(0, 188, 212, 0.7);
+            0 0 15px rgba(255, 87, 51, 1), /* Brighter ruby red */
+            0 0 25px rgba(255, 87, 51, 1),
+            0 0 35px rgba(255, 87, 51, 1),
+            0 0 45px rgba(255, 105, 45, 1), /* Brighter orange */
+            0 0 55px rgba(255, 105, 45, 1),
+            0 0 85px rgba(255, 105, 45, 1);
     }
     100% {
         text-shadow: 
-            0 0 10px rgba(255, 255, 255, 0.5),
-            0 0 20px rgba(255, 255, 255, 0.5),
-            0 0 30px rgba(255, 255, 255, 0.5),
-            0 0 40px rgba(0, 188, 212, 0.5),
-            0 0 50px rgba(0, 188, 212, 0.5),
-            0 0 75px rgba(0, 188, 212, 0.5);
+            0 0 10px rgba(255, 87, 51, 0.7), /* Ruby red */
+            0 0 20px rgba(255, 87, 51, 0.7), 
+            0 0 30px rgba(255, 87, 51, 0.7),
+            0 0 40px rgba(255, 105, 45, 0.7), /* Orange */
+            0 0 50px rgba(255, 105, 45, 0.7),
+            0 0 75px rgba(255, 105, 45, 0.7);
     }
 }
 
