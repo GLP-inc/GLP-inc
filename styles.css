@@ -66,18 +66,19 @@ body {
     }
 }
 
-/* Search bar styling */
+/* Search bar styling with octagon ends */
 .search-bar {
     width: 200px;
     height: 40px;
-    border-radius: 50px;
+    border-radius: 10px; /* Octagon-like corners */
     border: none;
     padding-left: 20px;
     background-color: white;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
     transition: box-shadow 0.3s;
     font-size: 1rem;
-    font-family: 'hHangus', sans-serif; /* Apply hHangus font to search bar */
+    font-family: 'hHangus', sans-serif; /* Keep the hHangus font */
+    clip-path: polygon(10% 0%, 90% 0%, 100% 20%, 100% 80%, 90% 100%, 10% 100%, 0% 80%, 0% 20%);
 }
 
 .search-bar:focus {
