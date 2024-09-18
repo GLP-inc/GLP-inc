@@ -70,7 +70,7 @@ body {
     cursor: pointer;
     position: absolute; /* Use absolute positioning for precise control */
     top: 50%; /* Center it vertically relative to its container */
-    right: 20px; /* Adjust this to position it correctly relative to the search bar */
+    right: 10px; /* Adjust this to position it correctly relative to the search bar */
 }
 
 .bar {
