@@ -69,8 +69,8 @@ body {
     flex-direction: column;
     cursor: pointer;
     position: absolute; /* Use absolute positioning for precise control */
-    top: 50%; /* Center it vertically relative to its container */
-    right: 40px; /* Adjust this to position it correctly relative to the search bar */
+    top: 60%; /* Center it vertically relative to its container */
+    right: 63px; /* Adjust this to position it correctly relative to the search bar */
 }
 
 .bar {
