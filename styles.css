@@ -64,7 +64,7 @@ body {
     flex-direction: column;
     cursor: pointer;
     position: relative;
-    margin-right: 20px; /* Adjusted margin to move it closer to the search bar */
+    margin-right: 10px; /* Moved further to the left */
 }
 
 .bar {
@@ -90,6 +90,7 @@ body {
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-family: sans-serif; /* Remove custom font */
 }
 
 .dropdown-menu.open .dropdown-content {
