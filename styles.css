@@ -160,7 +160,7 @@ body {
     z-index: 1;
 }
 
-/* Barbed wire effect */
+/* Barbed wire effect around the oval artists tab */
 .artists-link::before,
 .artists-link::after {
     content: '';
@@ -171,19 +171,23 @@ body {
 }
 
 .artists-link::before {
-    top: -5px;
-    left: -5px;
-    width: calc(100% + 10px);
-    height: calc(100% + 10px);
-    box-shadow: 0 0 0 3px #333, 0 0 0 6px #FF5733; /* Barbed wire effect */
+    top: -7px;
+    left: -7px;
+    width: calc(100% + 14px);
+    height: calc(100% + 14px);
+    box-shadow: 
+        0 0 0 3px #333, /* Inner border */
+        0 0 0 6px #FF5733; /* Outer border */
 }
 
 .artists-link::after {
-    top: -10px;
-    left: -10px;
-    width: calc(100% + 20px);
-    height: calc(100% + 20px);
-    box-shadow: 0 0 0 3px #333, 0 0 0 6px #FF5733; /* Barbed wire effect */
+    top: -12px;
+    left: -12px;
+    width: calc(100% + 24px);
+    height: calc(100% + 24px);
+    box-shadow: 
+        0 0 0 3px #333, /* Inner border */
+        0 0 0 6px #FF5733; /* Outer border */
 }
 
 /* Main content area */
