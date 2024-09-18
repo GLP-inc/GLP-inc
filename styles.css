@@ -229,8 +229,8 @@ body {
 }
 
 .concert-tickets-link::after {
-    top: -12px;
-    left: -12px;
+    top: -6px;
+    left: -6px;
     width: calc(100% + 24px);
     height: calc(100% + 24px);
     box-shadow: 
