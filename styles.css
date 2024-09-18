@@ -60,8 +60,10 @@ body {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    position: relative;
-    margin-left: -5px; /* Space between search bar and edge of screen */
+    position: absolute; /* Use absolute positioning for precise control */
+    top: 50%; /* Center it vertically relative to its container */
+    left: calc(100% - 50px); /* Move it to the left of the screen relative to its container */
+    margin-left: -40px; /* Adjust this to ensure the dropdown menu is visible */
 }
 
 .bar {
