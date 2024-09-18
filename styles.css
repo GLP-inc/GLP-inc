@@ -69,7 +69,7 @@ body {
     flex-direction: column;
     cursor: pointer;
     position: absolute; /* Use absolute positioning for precise control */
-    top: 350%; /* Center it vertically relative to its container */
+    top: 35%; /* Center it vertically relative to its container */
     right: 70px; /* Adjust this to position it correctly relative to the search bar */
 }
 
