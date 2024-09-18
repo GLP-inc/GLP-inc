@@ -32,7 +32,7 @@ body {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Less Shiny Glowing Effect for Title */
+/* Glowing Jewel Effect for Title */
 @font-face {
     font-family: 'Hangus';
     src: url('./fonts/hHangus.ttf') format('truetype'); /* Correct font file name */
@@ -138,10 +138,27 @@ body {
     cursor: pointer;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
-.arrow {
-    margin-left: 5px;
+.three-lines {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.three-lines::before,
+.three-lines::after,
+.three-lines div {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    margin: 2px 0;
+}
+
+.three-lines div {
+    width: 25px; /* Middle line slightly longer */
 }
 
 .dropdown-content {
