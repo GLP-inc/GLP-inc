@@ -51,30 +51,17 @@ body {
 /* Title styling */
 .website-title {
     font-size: 2rem; /* Adjusted for responsiveness */
-    color: #00bcd4; /* Initial cyan blue color */
+    color: #00bcd4; /* Cyan blue color */
     text-transform: uppercase;
     font-weight: bold;
-    text-shadow: 0 0 15px #00bcd4, 0 0 25px #00bcd4, 0 0 35px #00bcd4;
-    transition: color 0.5s, text-shadow 0.5s;
+    text-shadow: 0 0 10px #00bcd4, 0 0 15px #00bcd4, 0 0 20px #00bcd4;
+    transition: color 0.3s, text-shadow 0.3s;
     display: inline-block;
-    position: relative;
-    overflow: hidden;
-    animation: wave 2s infinite;
-}
-
-/* Wave animation */
-@keyframes wave {
-    0%, 100% {
-        transform: translateY(0) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-10px) rotate(5deg);
-    }
 }
 
 .website-title:hover {
     color: #00e5ff; /* Brighter cyan blue color */
-    text-shadow: 0 0 20px #00e5ff, 0 0 30px #00e5ff, 0 0 40px #00e5ff;
+    text-shadow: 0 0 20px #00e5ff, 0 0 25px #00e5ff, 0 0 30px #00e5ff;
 }
 
 /* Search bar styling */
