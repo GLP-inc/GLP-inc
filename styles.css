@@ -51,6 +51,7 @@ body {
     font-size: 1rem;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
     transition: box-shadow 0.3s;
+    margin-right: 10px; /* Adjust this value to move it slightly to the left */
 }
 
 /* Dropdown Menu (Three Lines) */
@@ -61,7 +62,7 @@ body {
     position: absolute; /* Positioned to the left of the search bar */
     top: 50%; /* Center vertically relative to the search bar */
     transform: translateY(-50%); /* Center align */
-    left: 180px; /* Adjust as needed */
+    left: 190px; /* Adjusted to be right next to the search bar */
     z-index: 100; /* Ensure it stays on top */
 }
 
