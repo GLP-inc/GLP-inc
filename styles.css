@@ -11,11 +11,9 @@ body {
     background-color: #6A787C; /* Battleship grey */
     font-family: 'hHangus', sans-serif;
     color: white;
-    display: flex;
-    flex-direction: column;
+    margin: 0;
     height: 100vh;
     overflow: hidden;
-    margin: 0;
 }
 
 /* Top Bar */
@@ -23,7 +21,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 25vh;
+    height: 80px;
     background-color: #000; /* Space black */
     display: flex;
     align-items: center;
@@ -32,12 +30,13 @@ body {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Title Styling */
+/* Title Styling (GL Promotions) */
 .website-title {
     font-size: 3rem;
     color: #FF4500; /* Ruby red mixed with orange */
     font-family: 'hHangus', sans-serif;
     text-shadow: 0px 0px 15px rgba(255, 69, 0, 0.6);
+    margin-left: 20px; /* Space from left */
 }
 
 /* Search Bar */
@@ -59,7 +58,7 @@ body {
     box-shadow: 0 0 20px rgba(255, 255, 255, 1);
 }
 
-/* Dropdown Menu */
+/* Dropdown Menu (Three Lines) */
 .dropdown-menu {
     display: flex;
     flex-direction: column;
@@ -79,27 +78,20 @@ body {
     width: 50px;
 }
 
-/* Dropdown Items */
+/* Dropdown Content */
 .dropdown-content {
     display: none;
     position: absolute;
     top: 100%;
-    right: 0;
+    left: 0; /* Ensure it drops down on the page to the left */
     background-color: #000;
     color: white;
     padding: 10px;
     border-radius: 8px;
 }
 
-.dropdown-menu:hover .dropdown-content {
-    display: block;
-}
-
-/* Main Content Area */
-.main-content {
-    margin-top: 25vh;
-    padding: 20px;
-    text-align: center;
+.dropdown-menu.open .dropdown-content {
+    display: block; /* Keep it open on click */
 }
 
 /* Artists and Concert Tickets Tabs */
@@ -111,9 +103,13 @@ body {
     color: #FF4500; /* Same color as GL Promotions */
     border-radius: 25px; /* Oval shape */
     position: absolute;
-    top: 110px; /* Adjusted positioning */
-    left: 20px;
+    left: 20px; /* Top-left positioning */
     border: 2px solid #FF4500; /* Barbed wire-like border effect */
+    text-align: center;
+}
+
+.artists-tab {
+    top: 100px; /* Position below the top black bar */
 }
 
 .concert-tickets-tab {
