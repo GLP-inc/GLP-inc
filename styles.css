@@ -133,7 +133,7 @@ body {
 /* Artists Tab styling */
 .artists-link {
     position: absolute;
-    top: 35vh; /* Lower the tab slightly */
+    top: 15vh; /* Move closer to the top bar */
     left: 20px; /* Move it to the right a little */
     display: inline-block;
     padding: 10px 20px;
@@ -187,7 +187,7 @@ body {
 /* Concert Tickets Tab styling */
 .concert-tickets-link {
     position: absolute;
-    top: calc(35vh + 60px); /* Place below the Artists tab */
+    top: calc(15vh + 60px); /* Place below the Artists tab */
     left: 20px; /* Adjust positioning */
     display: inline-block;
     padding: 10px 20px;
@@ -233,37 +233,4 @@ body {
     left: -12px;
     width: calc(100% + 24px);
     height: calc(100% + 24px);
-    box-shadow: 
-        0 0 0 3px #333, /* Inner border */
-        0 0 0 6px #FF5733; /* Outer border */
-}
-
-/* Main content area */
-.main-content {
-    margin-top: 25vh;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Responsive design for mobile */
-@media (max-width: 768px) {
-    .top-bar {
-        padding: 0 15px;
-    }
-
-    .search-bar {
-        width: 150px;
-    }
-
-    .website-title {
-        font-size: 1.5rem; /* Smaller font for mobile */
-    }
-
-    .artists-link {
-        top: 40vh; /* Adjust positioning for mobile if needed */
-    }
-
-    .concert-tickets-link {
-        top: calc(40vh + 60px); /* Adjust positioning for mobile if needed */
-    }
-}
+    box-shadow
