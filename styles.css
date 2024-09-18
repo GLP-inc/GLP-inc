@@ -37,6 +37,7 @@ body {
     justify-content: space-between;
     padding: 0 30px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    z-index: 100; /* Ensure the bar stays above everything */
 }
 
 /* GL Promotions Title */
@@ -110,7 +111,7 @@ body {
 /* Artists Tab styling */
 .artists-link {
     position: absolute;
-    top: 30px; /* Moves it under the top bar */
+    top: 28vh; /* Moves it under the top bar */
     left: 20px; /* Aligns to the left of the page */
     padding: 10px 20px;
     background-color: black;
@@ -156,7 +157,7 @@ body {
 /* Concert Tickets Tab styling */
 .concert-tickets-link {
     position: absolute;
-    top: 80px; /* Adjusted to be below the Artists tab */
+    top: 35vh; /* Adjusted to be below the Artists tab */
     left: 20px; /* Aligns to the left of the page */
     padding: 10px 20px;
     background-color: black;
