@@ -131,16 +131,10 @@ body {
 }
 
 /* Artists Tab styling */
-.artists-tab {
-    position: absolute;
-    top: 30vh; /* Lower the tab slightly */
-    left: 20px; /* Move it to the right a little */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .artists-link {
+    position: absolute;
+    top: 35vh; /* Lower the tab slightly */
+    left: 20px; /* Move it to the right a little */
     display: inline-block;
     padding: 10px 20px;
     background-color: black;
@@ -190,6 +184,60 @@ body {
         0 0 0 6px #FF5733; /* Outer border */
 }
 
+/* Concert Tickets Tab styling */
+.concert-tickets-link {
+    position: absolute;
+    top: calc(35vh + 60px); /* Place below the Artists tab */
+    left: 20px; /* Adjust positioning */
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: #FF5733; /* Ruby red mixed with orange */
+    text-decoration: none;
+    font-family: 'hHangus', sans-serif; /* Use hHangus font */
+    font-size: 1.2rem;
+    border-radius: 50%; /* Oval shape */
+    clip-path: ellipse(50% 50% at 50% 50%); /* Oval shape */
+    text-shadow: 
+        0 0 4px rgba(255, 87, 51, 0.3), /* Reduced glow ruby red */
+        0 0 8px rgba(255, 87, 51, 0.3), 
+        0 0 12px rgba(255, 87, 51, 0.3),
+        0 0 16px rgba(255, 105, 45, 0.3), /* Reduced glow orange */
+        0 0 20px rgba(255, 105, 45, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+/* Barbed wire effect around the oval concert tickets tab */
+.concert-tickets-link::before,
+.concert-tickets-link::after {
+    content: '';
+    position: absolute;
+    border: 2px solid #FF5733; /* Ruby red */
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.concert-tickets-link::before {
+    top: -7px;
+    left: -7px;
+    width: calc(100% + 14px);
+    height: calc(100% + 14px);
+    box-shadow: 
+        0 0 0 3px #333, /* Inner border */
+        0 0 0 6px #FF5733; /* Outer border */
+}
+
+.concert-tickets-link::after {
+    top: -12px;
+    left: -12px;
+    width: calc(100% + 24px);
+    height: calc(100% + 24px);
+    box-shadow: 
+        0 0 0 3px #333, /* Inner border */
+        0 0 0 6px #FF5733; /* Outer border */
+}
+
 /* Main content area */
 .main-content {
     margin-top: 25vh;
@@ -211,8 +259,11 @@ body {
         font-size: 1.5rem; /* Smaller font for mobile */
     }
 
-    .artists-tab {
-        top: 35vh; /* Adjust positioning for mobile if needed */
-        left: 10px; /* Move it further right if needed */
+    .artists-link {
+        top: 40vh; /* Adjust positioning for mobile if needed */
+    }
+
+    .concert-tickets-link {
+        top: calc(40vh + 60px); /* Adjust positioning for mobile if needed */
     }
 }
