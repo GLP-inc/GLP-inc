@@ -51,32 +51,30 @@ body {
 /* Title styling */
 .website-title {
     font-size: 2rem; /* Adjusted for responsiveness */
-    color: #FFA500; /* Bright orange color */
+    color: #00bcd4; /* Initial cyan blue color */
     text-transform: uppercase;
     font-weight: bold;
-    text-shadow: 0 0 15px #FFA500, 0 0 25px #FFA500, 0 0 35px #FFA500;
-    transition: text-shadow 0.5s, color 0.5s;
-    background: linear-gradient(145deg, #FFD700, #FFA500);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: twistMove 3s infinite; /* Added animation */
+    text-shadow: 0 0 15px #00bcd4, 0 0 25px #00bcd4, 0 0 35px #00bcd4;
+    transition: color 0.5s, text-shadow 0.5s;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    animation: wave 2s infinite;
 }
 
-/* Animation for twisting and moving */
-@keyframes twistMove {
-    0% {
-        transform: rotate(0deg) translateY(0);
+/* Wave animation */
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
     }
     50% {
-        transform: rotate(5deg) translateY(-5px);
-    }
-    100% {
-        transform: rotate(0deg) translateY(0);
+        transform: translateY(-10px) rotate(5deg);
     }
 }
 
 .website-title:hover {
-    text-shadow: 0 0 30px #ffffff, 0 0 40px #FFA500, 0 0 60px #FFA500;
+    color: #00e5ff; /* Brighter cyan blue color */
+    text-shadow: 0 0 20px #00e5ff, 0 0 30px #00e5ff, 0 0 40px #00e5ff;
 }
 
 /* Search bar styling */
