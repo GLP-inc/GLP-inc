@@ -5,25 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Goliath Promotions</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
-
 </head>
 <body>
     <!-- Top bar section -->
     <div class="top-bar">
-        <h1 class="website-title">GL Promotions</h1>
+        <h1 class="website-title">Goliath Promotions</h1>
         <input type="text" class="search-bar" placeholder="Search...">
         <div class="dropdown-menu">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar big-bar"></div>
+            <div class="menu-item">
+                Menu <span class="arrow">&#9660;</span> <!-- Arrow symbol -->
+                <ul class="dropdown-content">
+                    <li><a href="#beats">Beats</a></li>
+                    <li><a href="#concerts">Concerts</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 
     <!-- Main content -->
     <div class="main-content">
-        <!-- Content will go here -->
+        <section id="beats">
+            <h2>Beats</h2>
+            <p>Explore the latest beats...</p>
+        </section>
+        <section id="concerts">
+            <h2>Concerts</h2>
+            <p>Upcoming concerts and events...</p>
+        </section>
     </div>
 
     <script src="scripts.js"></script>
