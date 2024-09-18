@@ -35,7 +35,7 @@ body {
 /* Glowing Jewel Effect for Title */
 @font-face {
     font-family: 'Hangus';
-    src: url('./fonts/hHangus.ttf') format('truetype');
+    src: url('./fonts/hHangus.ttf') format('truetype'); /* Correct font file name */
 }
 
 .website-title {
@@ -90,7 +90,7 @@ body {
 
 /* Search bar styling */
 .search-bar {
-    width: 90%; /* Responsive width */
+    width: 100%; /* Full width */
     max-width: 300px; /* Maximum width for larger screens */
     height: 40px;
     border-radius: 50px;
@@ -102,6 +102,13 @@ body {
     font-size: 1rem;
     font-family: 'Brush Script MT', cursive; /* Cursive font */
     color: #333; /* Text color for the search bar */
+}
+
+/* Responsive search bar on small screens */
+@media (max-width: 600px) {
+    .search-bar {
+        width: 90%; /* Adjusted width for smaller screens */
+    }
 }
 
 .search-bar:focus {
