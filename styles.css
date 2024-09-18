@@ -57,7 +57,7 @@ body {
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
     transition: box-shadow 0.3s;
     position: absolute;
-    right: 190px; /* Align to the right of the container */
+    right: 250px; /* Align to the right of the container */
     top: 50%; /* Center vertically */
     transform: translateY(-50%); /* Adjust for centering */
 }
