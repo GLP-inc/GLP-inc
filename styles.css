@@ -134,7 +134,7 @@ body {
 .artists-link {
     position: absolute;
     top: 25vh; /* Move right below the top bar */
-    left: 20px; /* Move it to the right a little */
+    right: 20px; /* Align it to the right of the screen */
     display: inline-block;
     padding: 10px 20px;
     background-color: black;
@@ -188,7 +188,7 @@ body {
 .concert-tickets-link {
     position: absolute;
     top: calc(25vh + 60px); /* Place below the Artists tab */
-    left: 20px; /* Adjust positioning */
+    right: 20px; /* Align it to the right of the screen */
     display: inline-block;
     padding: 10px 20px;
     background-color: black;
@@ -228,4 +228,6 @@ body {
         0 0 0 6px #FF5733; /* Outer border */
 }
 
-.concert-tickets-link
+.concert-tickets-link::after {
+    top: -12px;
+    left:
