@@ -133,7 +133,7 @@ body {
 /* Artists Tab styling */
 .artists-link {
     position: fixed; /* Fixed positioning to keep it in view */
-    top: 25vh; /* Move it to below the top bar */
+    top: calc(25vh + 10px); /* Move it closer to the top bar */
     left: 20px; /* Move it to the left side of the screen */
     display: inline-block;
     padding: 10px 20px;
