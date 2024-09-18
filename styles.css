@@ -64,8 +64,7 @@ body {
     flex-direction: column;
     cursor: pointer;
     position: relative;
-    margin-right: 10px; /* Adjusted margin to move it closer to the search bar */
-    margin-left: 10px; /* Ensure it is within the screen */
+    margin-left: 20px; /* Move it closer to the search bar */
 }
 
 .bar {
@@ -107,7 +106,7 @@ body {
     color: #FF4500; /* Same color as GL Promotions */
     border-radius: 25px; /* Oval shape */
     position: absolute;
-    left: 20px; /* Top-left positioning */
+    left: 20px; /* Position to the left of the page */
     border: 2px solid #FF4500; /* Barbed wire-like border effect */
     text-align: center;
 }
