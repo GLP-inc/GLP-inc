@@ -62,8 +62,7 @@ body {
     cursor: pointer;
     position: absolute; /* Use absolute positioning for precise control */
     top: 50%; /* Center it vertically relative to its container */
-    left: calc(100% - 50px); /* Move it to the left of the screen relative to its container */
-    margin-left: -40px; /* Adjust this to ensure the dropdown menu is visible */
+    right: 20px; /* Adjust this to position it correctly relative to the search bar */
 }
 
 .bar {
@@ -83,7 +82,7 @@ body {
     display: none;
     position: absolute;
     top: 100%; /* Position it below the dropdown menu */
-    left: -10px; /* Align it to the left of the dropdown menu */
+    right: 0; /* Align it to the right of the dropdown menu */
     background-color: #000;
     color: white;
     padding: 10px;
@@ -110,12 +109,12 @@ body {
 }
 
 .artists-tab {
-    top: 80px; /* Positioned directly below the top bar */
+    top: 100px; /* Positioned directly below the top bar */
     left: 20px; /* Positioned to the left of the page */
 }
 
 .concert-tickets-tab {
-    top: 140px; /* Positioned under Artists tab */
+    top: 160px; /* Positioned under Artists tab */
     left: 20px; /* Same left alignment */
 }
 
