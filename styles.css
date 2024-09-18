@@ -25,7 +25,7 @@ body {
     background-color: #000; /* Space black */
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center; /* Center horizontally */
     padding: 0 20px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
     z-index: 10;
@@ -39,6 +39,9 @@ body {
     text-shadow: 0px 0px 15px rgba(255, 69, 0, 0.6);
     margin: 0;
     white-space: nowrap; /* Prevents text wrapping */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
 }
 
 /* Search Bar */
@@ -53,24 +56,21 @@ body {
     font-size: 1rem;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
     transition: box-shadow 0.3s;
-    position: relative; /* Allow positioning adjustments */
-    left: -170px; /* Adjust this value to move the search bar left */
+    position: absolute;
+    right: 20px; /* Align to the right of the container */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for centering */
 }
-
-/* Ensure search bar does not overlap with other elements */
-.search-bar {
-    margin-right: 10px; /* Adjust margin to ensure spacing */
-}
-
 
 /* Dropdown Menu (Three Lines) */
 .dropdown-menu {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    position: absolute; /* Use absolute positioning for precise control */
-    top: 35%; /* Center it vertically relative to its container */
-    right: 70px; /* Adjust this to position it correctly relative to the search bar */
+    position: absolute; /* Use absolute positioning */
+    top: 50%; /* Center vertically */
+    right: 20px; /* Align to the right of the container */
+    transform: translateY(-50%); /* Adjust for centering */
 }
 
 .bar {
