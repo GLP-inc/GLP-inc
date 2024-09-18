@@ -77,7 +77,7 @@ body {
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
     transition: box-shadow 0.3s;
     font-size: 1rem;
-    font-family: cursive;
+    font-family: 'hHangus', sans-serif; /* Apply hHangus font to search bar */
 }
 
 .search-bar:focus {
