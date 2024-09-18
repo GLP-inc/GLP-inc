@@ -1,11 +1,3 @@
-/* Import hHangus font */
-@font-face {
-    font-family: 'hHangus';
-    src: url('fonts/hHangus.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 /* General Reset */
 * {
     margin: 0;
@@ -16,63 +8,48 @@
 
 /* Body style */
 body {
-    background-color: #6A787C; /* Dark dolphin grey */
+    background-color: #6A787C;
     color: white;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
+    font-family: 'Arial', sans-serif;
     display: flex;
     flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
 }
 
-/* Top bar styling */
+/* Top bar */
 .top-bar {
     position: fixed;
     top: 0;
     width: 100%;
     height: 25vh;
-    background-color: black; /* Space black */
+    background-color: #000000;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 30px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
-    z-index: 100; /* Ensure the bar stays above everything */
 }
 
-/* GL Promotions Title */
 .website-title {
-    font-family: 'hHangus', sans-serif;
-    font-size: 2rem;
-    color: #FF5733; /* Ruby red mixed with orange */
-    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: #FF4500;
     font-weight: bold;
-    margin: 0;
-    white-space: nowrap;
-    display: inline-block;
-    text-shadow: 
-        0 0 4px rgba(255, 87, 51, 0.3),
-        0 0 8px rgba(255, 87, 51, 0.3), 
-        0 0 12px rgba(255, 87, 51, 0.3),
-        0 0 16px rgba(255, 105, 45, 0.3),
-        0 0 20px rgba(255, 105, 45, 0.3);
-    letter-spacing: 0.5px;
+    letter-spacing: 5px;
 }
 
-/* Search bar styling with octagon ends */
 .search-bar {
     width: 200px;
     height: 40px;
-    border-radius: 10px;
+    border-radius: 15px;
     border: none;
     padding-left: 20px;
     background-color: white;
     font-size: 1rem;
     font-family: 'hHangus', sans-serif;
-    clip-path: polygon(10% 0%, 90% 0%, 100% 20%, 100% 80%, 90% 100%, 10% 100%, 0% 80%, 0% 20%);
 }
 
-/* Dropdown menu styling (hamburger menu) */
+/* Dropdown Menu Styling */
 .dropdown-menu {
     display: flex;
     flex-direction: column;
@@ -89,7 +66,7 @@ body {
 }
 
 .dropdown-content {
-    display: none;
+    display: none; /* Hidden by default */
     position: absolute;
     right: 0;
     background-color: black;
@@ -101,101 +78,37 @@ body {
 .dropdown-content a {
     color: white;
     padding: 12px 16px;
+    text-decoration: none;
     display: block;
 }
 
-.dropdown-menu:hover .dropdown-content {
-    display: block;
-}
-
-/* Artists Tab styling */
-.artists-link {
+/* Artists and Concert Tickets Tabs */
+.artists-tab, .concert-tickets-tab {
+    font-size: 1.5rem;
+    padding: 10px;
     position: absolute;
-    top: 28vh; /* Moves it under the top bar */
-    left: 20px; /* Aligns to the left of the page */
-    padding: 10px 20px;
-    background-color: black;
-    color: #FF5733;
-    text-decoration: none;
+    background-color: #000;
+    color: #FF4500;
     font-family: 'hHangus', sans-serif;
-    font-size: 1.2rem;
-    border-radius: 50%; /* Oval shape */
-    clip-path: ellipse(50% 50% at 50% 50%);
-    text-shadow: 
-        0 0 4px rgba(255, 87, 51, 0.3),
-        0 0 8px rgba(255, 87, 51, 0.3),
-        0 0 12px rgba(255, 87, 51, 0.3),
-        0 0 16px rgba(255, 105, 45, 0.3),
-        0 0 20px rgba(255, 105, 45, 0.3);
-    z-index: 1;
+    text-align: center;
+    border-radius: 25px;
+    border: 2px solid #FF4500;
+    box-shadow: 0px 0px 10px #FF4500;
 }
 
-/* Barbed wire effect around the oval artists tab */
-.artists-link::before,
-.artists-link::after {
-    content: '';
-    position: absolute;
-    border: 2px solid #FF5733;
-    border-radius: 50%;
-    z-index: -1;
+.artists-tab {
+    top: 26vh;
+    left: 2vw;
 }
 
-.artists-link::before {
-    top: -7px;
-    left: -7px;
-    width: calc(100% + 14px);
-    height: calc(100% + 14px);
+.concert-tickets-tab {
+    top: 34vh;
+    left: 2vw;
 }
 
-.artists-link::after {
-    top: -12px;
-    left: -12px;
-    width: calc(100% + 24px);
-    height: calc(100% + 24px);
-}
-
-/* Concert Tickets Tab styling */
-.concert-tickets-link {
-    position: absolute;
-    top: 35vh; /* Adjusted to be below the Artists tab */
-    left: 20px; /* Aligns to the left of the page */
-    padding: 10px 20px;
-    background-color: black;
-    color: #FF5733;
-    text-decoration: none;
-    font-family: 'hHangus', sans-serif;
-    font-size: 1.2rem;
-    border-radius: 50%;
-    clip-path: ellipse(50% 50% at 50% 50%);
-    text-shadow: 
-        0 0 4px rgba(255, 87, 51, 0.3),
-        0 0 8px rgba(255, 87, 51, 0.3),
-        0 0 12px rgba(255, 87, 51, 0.3),
-        0 0 16px rgba(255, 105, 45, 0.3),
-        0 0 20px rgba(255, 105, 45, 0.3);
-    z-index: 1;
-}
-
-/* Barbed wire effect around the oval concert tickets tab */
-.concert-tickets-link::before,
-.concert-tickets-link::after {
-    content: '';
-    position: absolute;
-    border: 2px solid #FF5733;
-    border-radius: 50%;
-    z-index: -1;
-}
-
-.concert-tickets-link::before {
-    top: -7px;
-    left: -7px;
-    width: calc(100% + 14px);
-    height: calc(100% + 14px);
-}
-
-.concert-tickets-link::after {
-    top: -12px;
-    left: -12px;
-    width: calc(100% + 24px);
-    height: calc(100% + 24px);
+/* Main content */
+.main-content {
+    margin-top: 25vh;
+    padding: 20px;
+    text-align: center;
 }
