@@ -1,3 +1,11 @@
+/* Import hHangus font */
+@font-face {
+    font-family: 'hHangus';
+    src: url('fonts/hHangus.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* General Reset */
 * {
     margin: 0;
@@ -34,7 +42,7 @@ body {
 
 /* GL Promotions Title */
 .website-title {
-    font-family: 'Hangus', sans-serif;
+    font-family: 'hHangus', sans-serif; /* Using the hHangus font */
     font-size: 2rem;
     color: #FF5733; /* Ruby red mixed with orange */
     text-transform: uppercase;
