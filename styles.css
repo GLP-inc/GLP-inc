@@ -162,14 +162,6 @@ body {
     max-width: 800px; /* Maximum width for larger screens */
 }
 
-/* Section styling */
-section {
-    margin: 20px 0;
-    padding: 20px;
-    border: 1px solid #333;
-    border-radius: 5px;
-}
-
 /* Media Queries for Smaller Devices */
 @media (max-width: 768px) {
     .top-bar {
