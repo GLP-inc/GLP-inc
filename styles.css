@@ -54,7 +54,7 @@ body {
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
     transition: box-shadow 0.3s;
     position: relative; /* Allow positioning adjustments */
-    left: 10px; /* Adjust this value to move the search bar left */
+    left: 25px; /* Adjust this value to move the search bar left */
 }
 
 /* Ensure search bar does not overlap with other elements */
