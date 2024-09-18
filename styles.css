@@ -39,14 +39,12 @@ body {
     color: #00bcd4; /* Cyan blue color */
     text-transform: uppercase;
     font-weight: bold;
-    text-shadow: 0 0 10px #00bcd4, 0 0 15px #00bcd4, 0 0 20px #00bcd4;
-    transition: color 0.3s, text-shadow 0.3s;
-    display: inline-block;
     position: relative;
+    overflow: hidden; /* Ensures the effect doesn't go outside the text */
+    display: inline-block;
 }
 
-.website-title::before {
-    content: attr(data-title);
+.website-title span {
     position: absolute;
     top: 0;
     left: 0;
@@ -56,11 +54,11 @@ body {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+    pointer-events: none; /* Allows clicks to pass through */
     transition: background 0.3s;
-    z-index: 1;
 }
 
-.website-title:hover::before {
+.website-title:hover span {
     background: linear-gradient(90deg, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0.5) 100%);
 }
 
