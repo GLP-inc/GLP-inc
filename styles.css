@@ -132,9 +132,9 @@ body {
 
 /* Artists Tab styling */
 .artists-link {
-    position: absolute;
-    top: 10vh; /* Move right below the top bar */
-    left: 20px; /* Align it to the left of the screen */
+    position: fixed; /* Fixed positioning to keep it in view */
+    top: 25vh; /* Move it to below the top bar */
+    left: 20px; /* Move it to the left side of the screen */
     display: inline-block;
     padding: 10px 20px;
     background-color: black;
@@ -186,9 +186,9 @@ body {
 
 /* Concert Tickets Tab styling */
 .concert-tickets-link {
-    position: absolute;
-    top: 10vh; /* Place below the Artists tab */
-    left: 20px; /* Align it to the left of the screen */
+    position: fixed; /* Fixed positioning to keep it in view */
+    top: calc(25vh + 60px); /* Move it below the Artists tab */
+    left: 20px; /* Move it to the left side of the screen */
     display: inline-block;
     padding: 10px 20px;
     background-color: black;
@@ -233,3 +233,7 @@ body {
     left: -12px;
     width: calc(100% + 24px);
     height: calc(100% + 24px);
+    box-shadow: 
+        0 0 0 3px #333, /* Inner border */
+        0 0 0 6px #FF5733; /* Outer border */
+}
