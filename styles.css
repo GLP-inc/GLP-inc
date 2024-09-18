@@ -61,7 +61,7 @@ body {
     flex-direction: column;
     cursor: pointer;
     position: relative;
-    margin-left: 5px; /* Space between search bar and dropdown menu */
+    margin-left: 0px; /* Space between search bar and edge of screen */
 }
 
 .bar {
