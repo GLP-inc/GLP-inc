@@ -69,7 +69,7 @@ body {
     cursor: pointer;
     position: absolute; /* Use absolute positioning */
     top: 50%; /* Center vertically */
-    right: -35px; /* Align to the right of the container */
+    right: 35px; /* Align to the right of the container */
     transform: translateY(-50%); /* Adjust for centering */
 }
 
