@@ -64,6 +64,7 @@ body {
     flex-direction: column;
     cursor: pointer;
     position: relative;
+    margin-left: 10px; /* Adjusted margin to move it closer to the search bar */
 }
 
 .bar {
