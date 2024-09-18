@@ -133,8 +133,8 @@ body {
 /* Artists Tab styling */
 .artists-tab {
     position: absolute;
-    top: 25vh; /* Just below the top bar */
-    left: 0; /* Align to the left */
+    top: 30vh; /* Lower the tab slightly */
+    left: 20px; /* Move it to the right a little */
 }
 
 .artists-link {
@@ -145,8 +145,8 @@ body {
     text-decoration: none;
     font-family: 'Arial', sans-serif;
     font-size: 1.2rem;
-    border-radius: 15px 0 0 15px; /* Creates triangular-like ends */
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 15% 100%, 0% 50%); /* Triangular effect on both ends */
+    border-radius: 50%; /* Oval shape */
+    clip-path: ellipse(50% 50% at 50% 50%); /* Creates an oval shape */
     transition: background-color 0.3s;
 }
 
@@ -176,6 +176,7 @@ body {
     }
 
     .artists-tab {
-        top: 30vh; /* Adjust positioning for mobile if needed */
+        top: 35vh; /* Adjust positioning for mobile if needed */
+        left: 10px; /* Move it further right if needed */
     }
 }
