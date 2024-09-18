@@ -64,7 +64,7 @@ body {
     flex-direction: column;
     cursor: pointer;
     position: relative;
-    margin-left: 10px; /* Adjusted margin to move it closer to the search bar */
+    margin-left: 15px; /* Adjusted margin to move it closer to the search bar */
 }
 
 .bar {
@@ -83,12 +83,13 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0; /* Ensure it drops down on the page to the left */
+    top: 100%; /* Position it below the dropdown menu */
+    left: -10px; /* Ensure it drops down onto the page to the left */
     background-color: #000;
     color: white;
     padding: 10px;
     border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .dropdown-menu.open .dropdown-content {
@@ -110,11 +111,11 @@ body {
 }
 
 .artists-tab {
-    top: 100px; /* Position below the top black bar */
+    top: 90px; /* Position closer to the top bar */
 }
 
 .concert-tickets-tab {
-    top: 180px; /* Positioned under Artists tab */
+    top: 150px; /* Positioned under Artists tab */
 }
 
 /* Barbed wire effect for the tabs */
