@@ -42,11 +42,26 @@ body {
     text-shadow: 0 0 10px #00bcd4, 0 0 15px #00bcd4, 0 0 20px #00bcd4;
     transition: color 0.3s, text-shadow 0.3s;
     display: inline-block;
+    position: relative;
 }
 
-.website-title:hover {
-    color: #00e5ff; /* Brighter cyan blue color */
-    text-shadow: 0 0 20px #00e5ff, 0 0 25px #00e5ff, 0 0 30px #00e5ff;
+.website-title::before {
+    content: attr(data-title);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: background 0.3s;
+    z-index: 1;
+}
+
+.website-title:hover::before {
+    background: linear-gradient(90deg, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0.5) 100%);
 }
 
 /* Search bar styling */
