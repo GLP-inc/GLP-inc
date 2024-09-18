@@ -130,6 +130,30 @@ body {
     display: block; /* Show dropdown when hovered */
 }
 
+/* Artists Tab styling */
+.artists-tab {
+    position: absolute;
+    top: 26vh; /* Just below the top bar */
+    right: 30px; /* Align to the right */
+}
+
+.artists-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    border-radius: 0 15px 15px 0; /* Creates a triangular-like end */
+    clip-path: polygon(100% 0, 85% 50%, 100% 100%, 0% 100%, 0% 0%); /* Triangular effect on right end */
+    transition: background-color 0.3s;
+}
+
+.artists-link:hover {
+    background-color: #333;
+}
+
 /* Main content area */
 .main-content {
     margin-top: 25vh;
@@ -149,5 +173,9 @@ body {
 
     .website-title {
         font-size: 1.5rem; /* Smaller font for mobile */
+    }
+
+    .artists-tab {
+        top: 30vh; /* Adjust positioning for mobile if needed */
     }
 }
