@@ -32,7 +32,7 @@ body {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Glowing Jewel Effect for Title */
+/* Less Shiny Glowing Effect for Title */
 @font-face {
     font-family: 'Hangus';
     src: url('./fonts/hHangus.ttf') format('truetype'); /* Correct font file name */
@@ -50,42 +50,49 @@ body {
     display: inline-block;
     animation: shimmer 1.5s infinite;
     text-shadow: 
-        0 0 10px rgba(255, 87, 51, 0.7), /* Ruby red */
-        0 0 20px rgba(255, 87, 51, 0.7), 
-        0 0 30px rgba(255, 87, 51, 0.7),
-        0 0 40px rgba(255, 105, 45, 0.7), /* Orange */
-        0 0 50px rgba(255, 105, 45, 0.7),
-        0 0 75px rgba(255, 105, 45, 0.7);
-    letter-spacing: 1px; /* Added letter spacing for more spacing */
+        0 0 8px rgba(255, 87, 51, 0.6), /* Reduced ruby red */
+        0 0 16px rgba(255, 87, 51, 0.6), 
+        0 0 24px rgba(255, 87, 51, 0.6),
+        0 0 32px rgba(255, 105, 45, 0.6), /* Reduced orange */
+        0 0 40px rgba(255, 105, 45, 0.6),
+        0 0 60px rgba(255, 105, 45, 0.6);
+    letter-spacing: 0.5px; /* Adjusted for less spacing */
+}
+
+/* Adjust letter-spacing for larger screens */
+@media (min-width: 1200px) {
+    .website-title {
+        letter-spacing: 0.2px; /* Less spacing on larger screens */
+    }
 }
 
 @keyframes shimmer {
     0% {
         text-shadow: 
-            0 0 10px rgba(255, 87, 51, 0.7), /* Ruby red */
-            0 0 20px rgba(255, 87, 51, 0.7), 
-            0 0 30px rgba(255, 87, 51, 0.7),
-            0 0 40px rgba(255, 105, 45, 0.7), /* Orange */
-            0 0 50px rgba(255, 105, 45, 0.7),
-            0 0 75px rgba(255, 105, 45, 0.7);
+            0 0 8px rgba(255, 87, 51, 0.6), /* Ruby red */
+            0 0 16px rgba(255, 87, 51, 0.6), 
+            0 0 24px rgba(255, 87, 51, 0.6),
+            0 0 32px rgba(255, 105, 45, 0.6), /* Orange */
+            0 0 40px rgba(255, 105, 45, 0.6),
+            0 0 60px rgba(255, 105, 45, 0.6);
     }
     50% {
         text-shadow: 
-            0 0 15px rgba(255, 87, 51, 1), /* Brighter ruby red */
-            0 0 25px rgba(255, 87, 51, 1),
-            0 0 35px rgba(255, 87, 51, 1),
-            0 0 45px rgba(255, 105, 45, 1), /* Brighter orange */
-            0 0 55px rgba(255, 105, 45, 1),
-            0 0 85px rgba(255, 105, 45, 1);
+            0 0 12px rgba(255, 87, 51, 0.9), /* Less bright ruby red */
+            0 0 20px rgba(255, 87, 51, 0.9),
+            0 0 28px rgba(255, 87, 51, 0.9),
+            0 0 36px rgba(255, 105, 45, 0.9), /* Less bright orange */
+            0 0 45px rgba(255, 105, 45, 0.9),
+            0 0 70px rgba(255, 105, 45, 0.9);
     }
     100% {
         text-shadow: 
-            0 0 10px rgba(255, 87, 51, 0.7), /* Ruby red */
-            0 0 20px rgba(255, 87, 51, 0.7), 
-            0 0 30px rgba(255, 87, 51, 0.7),
-            0 0 40px rgba(255, 105, 45, 0.7), /* Orange */
-            0 0 50px rgba(255, 105, 45, 0.7),
-            0 0 75px rgba(255, 105, 45, 0.7);
+            0 0 8px rgba(255, 87, 51, 0.6), /* Ruby red */
+            0 0 16px rgba(255, 87, 51, 0.6), 
+            0 0 24px rgba(255, 87, 51, 0.6),
+            0 0 32px rgba(255, 105, 45, 0.6), /* Orange */
+            0 0 40px rgba(255, 105, 45, 0.6),
+            0 0 60px rgba(255, 105, 45, 0.6);
     }
 }
 
