@@ -8,7 +8,7 @@
 
 /* Body style */
 body {
-    background-color: #6A787C; /* Dark grey color */
+    background-color: #6A787C; /* Dark dolphin grey */
     color: white;
     display: flex;
     flex-direction: column;
@@ -18,105 +18,81 @@ body {
     overflow: hidden;
 }
 
-/* Dark Space Black Top bar styling */
+/* Top bar styling */
 .top-bar {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 20vh; /* Adjusted height for better responsiveness */
-    background-color: #0d0d0d; /* Dark space black color */
+    height: 25vh;
+    background-color: black; /* Space black */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 2%;
+    padding: 0 30px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Glowing Jewel Effect for Title */
-@font-face {
-    font-family: 'Hangus';
-    src: url('./fonts/hHangus.ttf') format('truetype'); /* Correct font file name */
-}
-
+/* Glowing Jewel Effect for Title with Reduced Glow */
 .website-title {
-    font-family: 'Hangus', sans-serif; /* Apply Hangus font */
-    font-size: 2rem; /* Adjusted for responsiveness */
+    font-family: 'Hangus', sans-serif;
+    font-size: 2rem;
     color: #FF5733; /* Ruby red mixed with orange */
     text-transform: uppercase;
     font-weight: bold;
     margin: 0;
-    white-space: nowrap; /* Prevent text wrapping */
+    white-space: nowrap;
     position: relative;
     display: inline-block;
-    animation: shimmer 1.5s infinite;
     text-shadow: 
-        0 0 8px rgba(255, 87, 51, 0.6), /* Reduced ruby red */
-        0 0 16px rgba(255, 87, 51, 0.6), 
-        0 0 24px rgba(255, 87, 51, 0.6),
-        0 0 32px rgba(255, 105, 45, 0.6), /* Reduced orange */
-        0 0 40px rgba(255, 105, 45, 0.6),
-        0 0 60px rgba(255, 105, 45, 0.6);
-    letter-spacing: 0.5px; /* Adjusted for less spacing */
+        0 0 4px rgba(255, 87, 51, 0.3), /* Reduced glow ruby red */
+        0 0 8px rgba(255, 87, 51, 0.3), 
+        0 0 12px rgba(255, 87, 51, 0.3),
+        0 0 16px rgba(255, 105, 45, 0.3), /* Reduced glow orange */
+        0 0 20px rgba(255, 105, 45, 0.3);
+    letter-spacing: 0.5px; /* Slight letter spacing */
+    transition: text-shadow 0.3s ease;
 }
 
-/* Adjust letter-spacing for larger screens */
-@media (min-width: 1200px) {
-    .website-title {
-        letter-spacing: 0.2px; /* Less spacing on larger screens */
-    }
-}
-
+/* Shimmer Animation Keyframes */
 @keyframes shimmer {
     0% {
         text-shadow: 
-            0 0 8px rgba(255, 87, 51, 0.6), /* Ruby red */
-            0 0 16px rgba(255, 87, 51, 0.6), 
-            0 0 24px rgba(255, 87, 51, 0.6),
-            0 0 32px rgba(255, 105, 45, 0.6), /* Orange */
-            0 0 40px rgba(255, 105, 45, 0.6),
-            0 0 60px rgba(255, 105, 45, 0.6);
+            0 0 4px rgba(255, 87, 51, 0.3), 
+            0 0 8px rgba(255, 87, 51, 0.3), 
+            0 0 12px rgba(255, 87, 51, 0.3),
+            0 0 16px rgba(255, 105, 45, 0.3), 
+            0 0 20px rgba(255, 105, 45, 0.3);
     }
     50% {
         text-shadow: 
-            0 0 12px rgba(255, 87, 51, 0.9), /* Less bright ruby red */
-            0 0 20px rgba(255, 87, 51, 0.9),
-            0 0 28px rgba(255, 87, 51, 0.9),
-            0 0 36px rgba(255, 105, 45, 0.9), /* Less bright orange */
-            0 0 45px rgba(255, 105, 45, 0.9),
-            0 0 70px rgba(255, 105, 45, 0.9);
+            0 0 6px rgba(255, 87, 51, 0.4), 
+            0 0 10px rgba(255, 87, 51, 0.4),
+            0 0 14px rgba(255, 87, 51, 0.4),
+            0 0 18px rgba(255, 105, 45, 0.4), 
+            0 0 22px rgba(255, 105, 45, 0.4);
     }
     100% {
         text-shadow: 
-            0 0 8px rgba(255, 87, 51, 0.6), /* Ruby red */
-            0 0 16px rgba(255, 87, 51, 0.6), 
-            0 0 24px rgba(255, 87, 51, 0.6),
-            0 0 32px rgba(255, 105, 45, 0.6), /* Orange */
-            0 0 40px rgba(255, 105, 45, 0.6),
-            0 0 60px rgba(255, 105, 45, 0.6);
+            0 0 4px rgba(255, 87, 51, 0.3), 
+            0 0 8px rgba(255, 87, 51, 0.3), 
+            0 0 12px rgba(255, 87, 51, 0.3),
+            0 0 16px rgba(255, 105, 45, 0.3), 
+            0 0 20px rgba(255, 105, 45, 0.3);
     }
 }
 
 /* Search bar styling */
 .search-bar {
-    width: 100%; /* Full width */
-    max-width: 300px; /* Maximum width for larger screens */
+    width: 200px;
     height: 40px;
     border-radius: 50px;
     border: none;
-    padding-left: 15px; /* Adjusted padding */
+    padding-left: 20px;
     background-color: white;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
     transition: box-shadow 0.3s;
     font-size: 1rem;
-    font-family: 'Brush Script MT', cursive; /* Cursive font */
-    color: #333; /* Text color for the search bar */
-}
-
-/* Responsive search bar on small screens */
-@media (max-width: 600px) {
-    .search-bar {
-        width: 90%; /* Adjusted width for smaller screens */
-    }
+    font-family: 'Cursive'; /* Cursive font for search bar */
 }
 
 .search-bar:focus {
@@ -127,71 +103,40 @@ body {
 /* Dropdown menu styling */
 .dropdown-menu {
     display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.three-lines {
-    width: 30px;
-    height: 20px;
-    display: flex;
     flex-direction: column;
-    justify-content: space-between;
     cursor: pointer;
-    position: relative;
 }
 
-.three-lines::before,
-.three-lines::after,
-.three-lines div {
-    content: '';
-    width: 100%;
-    height: 3px;
-    background-color: white;
-}
-
-.three-lines div {
-    width: 80%; /* Middle line slightly longer */
+.bar {
+    width: 35px;
     height: 4px;
+    background-color: white;
+    margin: 3px 0;
+    transition: transform 0.3s;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0; /* Position dropdown to the left of the menu */
-    background-color: #0d0d0d;
-    border-radius: 5px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 150px; /* Adjust width as needed */
-}
-
-.dropdown-content li {
-    padding: 10px;
-}
-
-.dropdown-content li a {
-    color: white;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content li a:hover {
-    background-color: #333;
-}
-
-/* Show dropdown on hover */
-.dropdown-menu:hover .dropdown-content {
-    display: block;
+.big-bar {
+    width: 50px;
 }
 
 /* Main content area */
 .main-content {
-    margin-top: 22vh; /* Adjusted margin for better positioning */
+    margin-top: 25vh;
     padding: 20px;
     text-align: center;
-    width: 90%;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .top-bar {
+        padding: 0 15px;
+    }
+
+    .search-bar {
+        width: 150px;
+    }
+
+    .website-title {
+        font-size: 1.5rem;
+    }
 }
