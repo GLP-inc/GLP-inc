@@ -32,7 +32,7 @@ body {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Glowing Jewel Effect for Title with Reduced Glow */
+/* GL Promotions Title */
 .website-title {
     font-family: 'Hangus', sans-serif;
     font-size: 2rem;
@@ -41,7 +41,6 @@ body {
     font-weight: bold;
     margin: 0;
     white-space: nowrap;
-    position: relative;
     display: inline-block;
     text-shadow: 
         0 0 4px rgba(255, 87, 51, 0.3), /* Reduced glow ruby red */
@@ -49,36 +48,7 @@ body {
         0 0 12px rgba(255, 87, 51, 0.3),
         0 0 16px rgba(255, 105, 45, 0.3), /* Reduced glow orange */
         0 0 20px rgba(255, 105, 45, 0.3);
-    letter-spacing: 0.5px; /* Slight letter spacing */
-    transition: text-shadow 0.3s ease;
-}
-
-/* Shimmer Animation Keyframes */
-@keyframes shimmer {
-    0% {
-        text-shadow: 
-            0 0 4px rgba(255, 87, 51, 0.3), 
-            0 0 8px rgba(255, 87, 51, 0.3), 
-            0 0 12px rgba(255, 87, 51, 0.3),
-            0 0 16px rgba(255, 105, 45, 0.3), 
-            0 0 20px rgba(255, 105, 45, 0.3);
-    }
-    50% {
-        text-shadow: 
-            0 0 6px rgba(255, 87, 51, 0.4), 
-            0 0 10px rgba(255, 87, 51, 0.4),
-            0 0 14px rgba(255, 87, 51, 0.4),
-            0 0 18px rgba(255, 105, 45, 0.4), 
-            0 0 22px rgba(255, 105, 45, 0.4);
-    }
-    100% {
-        text-shadow: 
-            0 0 4px rgba(255, 87, 51, 0.3), 
-            0 0 8px rgba(255, 87, 51, 0.3), 
-            0 0 12px rgba(255, 87, 51, 0.3),
-            0 0 16px rgba(255, 105, 45, 0.3), 
-            0 0 20px rgba(255, 105, 45, 0.3);
-    }
+    letter-spacing: 0.5px;
 }
 
 /* Search bar styling */
@@ -92,7 +62,7 @@ body {
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
     transition: box-shadow 0.3s;
     font-size: 1rem;
-    font-family: 'Cursive'; /* Cursive font for search bar */
+    font-family: cursive;
 }
 
 .search-bar:focus {
@@ -100,11 +70,12 @@ body {
     box-shadow: 0 0 20px rgba(255, 255, 255, 1);
 }
 
-/* Dropdown menu styling */
+/* Dropdown menu styling (three uneven lines) */
 .dropdown-menu {
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    position: relative; /* Added position to help dropdown positioning */
 }
 
 .bar {
@@ -117,6 +88,29 @@ body {
 
 .big-bar {
     width: 50px;
+}
+
+/* Dropdown content */
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    left: 0; /* Align dropdown to the left */
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-menu:hover .dropdown-content {
+    display: block; /* Show the dropdown when hovered */
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
 }
 
 /* Main content area */
