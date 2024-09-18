@@ -141,17 +141,29 @@ body {
     display: inline-block;
     padding: 10px 20px;
     background-color: black;
-    color: white;
+    color: #FF5733; /* Ruby red mixed with orange */
     text-decoration: none;
-    font-family: 'Arial', sans-serif;
+    font-family: 'hHangus', sans-serif; /* Use hHangus font */
     font-size: 1.2rem;
     border-radius: 50%; /* Oval shape */
-    clip-path: ellipse(50% 50% at 50% 50%); /* Creates an oval shape */
+    clip-path: ellipse(50% 50% at 50% 50%); /* Oval shape */
+    text-shadow: 
+        0 0 4px rgba(255, 87, 51, 0.3), /* Reduced glow ruby red */
+        0 0 8px rgba(255, 87, 51, 0.3), 
+        0 0 12px rgba(255, 87, 51, 0.3),
+        0 0 16px rgba(255, 105, 45, 0.3), /* Reduced glow orange */
+        0 0 20px rgba(255, 105, 45, 0.3);
     transition: background-color 0.3s;
 }
 
 .artists-link:hover {
     background-color: #333;
+    text-shadow: 
+        0 0 4px rgba(255, 87, 51, 0.5), /* Enhanced glow ruby red */
+        0 0 8px rgba(255, 87, 51, 0.5), 
+        0 0 12px rgba(255, 87, 51, 0.5),
+        0 0 16px rgba(255, 105, 45, 0.5), /* Enhanced glow orange */
+        0 0 20px rgba(255, 105, 45, 0.5);
 }
 
 /* Main content area */
