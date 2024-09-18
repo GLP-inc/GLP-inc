@@ -63,8 +63,10 @@ body {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    position: relative;
-    margin-left: 20px; /* Move it closer to the search bar */
+    position: absolute;
+    left: 220px; /* Positioned closer to the search bar */
+    top: 50%; /* Center vertically relative to the search bar */
+    transform: translateY(-50%); /* Center align */
 }
 
 .bar {
