@@ -26,7 +26,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 30px;
+    padding: 0 20px; /* Adjusted padding for better spacing */
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
 }
 
@@ -36,7 +36,7 @@ body {
     color: #FF4500; /* Ruby red mixed with orange */
     font-family: 'hHangus', sans-serif;
     text-shadow: 0px 0px 15px rgba(255, 69, 0, 0.6);
-    margin-left: 20px; /* Space from left */
+    margin: 0; /* No margin */
 }
 
 /* Search Bar */
@@ -53,18 +53,13 @@ body {
     transition: box-shadow 0.3s;
 }
 
-.search-bar:focus {
-    outline: none;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 1);
-}
-
 /* Dropdown Menu (Three Lines) */
 .dropdown-menu {
     display: flex;
     flex-direction: column;
     cursor: pointer;
     position: absolute;
-    left: 220px; /* Positioned closer to the search bar */
+    left: calc(100% - 270px); /* Position closer to the search bar */
     top: 50%; /* Center vertically relative to the search bar */
     transform: translateY(-50%); /* Center align */
 }
