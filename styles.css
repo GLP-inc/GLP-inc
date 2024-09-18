@@ -43,7 +43,7 @@ body {
 /* GL Promotions Title */
 .website-title {
     font-family: 'hHangus', sans-serif; /* Using the hHangus font */
-    font-size: 2rem;
+    font-size: 2rem; /* Default size */
     color: #FF5733; /* Ruby red mixed with orange */
     text-transform: uppercase;
     font-weight: bold;
@@ -57,6 +57,13 @@ body {
         0 0 16px rgba(255, 105, 45, 0.3), /* Reduced glow orange */
         0 0 20px rgba(255, 105, 45, 0.3);
     letter-spacing: 0.5px;
+}
+
+/* Larger font size for desktop */
+@media (min-width: 1024px) {
+    .website-title {
+        font-size: 3rem; /* Increase the size for desktops */
+    }
 }
 
 /* Search bar styling */
@@ -140,6 +147,6 @@ body {
     }
 
     .website-title {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* Smaller font for mobile */
     }
 }
