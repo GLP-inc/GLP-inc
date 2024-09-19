@@ -25,7 +25,7 @@ body {
     background-color: #000; /* Space black */
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Adjusts for responsive design */
+    justify-content: space-between;
     padding: 0 20px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
     z-index: 10;
@@ -33,7 +33,7 @@ body {
 
 /* Title Styling (GL Promotions) */
 .website-title {
-    font-size: 2rem; /* Adjusted for better scaling */
+    font-size: 3rem; /* Original size */
     color: #FF4500; /* Ruby red mixed with orange */
     font-family: 'hHangus', sans-serif;
     text-shadow: 0px 0px 15px rgba(255, 69, 0, 0.6);
@@ -45,13 +45,14 @@ body {
     font-family: 'hHangus', sans-serif;
     width: 200px;
     height: 40px;
-    border-radius: 15px; /* Octagonal-like ends */
+    border-radius: 15px;
     border: none;
     padding-left: 20px;
     background-color: white;
     font-size: 1rem;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
     transition: box-shadow 0.3s;
+    margin-right: 20px;
 }
 
 /* Dropdown Menu */
@@ -73,7 +74,7 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 80px; /* Adjusted for fixed top bar */
+    top: 80px;
     right: 20px;
     background-color: #000;
     color: white;
@@ -84,7 +85,7 @@ body {
 }
 
 .dropdown-menu.open .dropdown-content {
-    display: block; /* Show when clicked */
+    display: block;
 }
 
 /* Artists and Concert Tickets Tabs */
@@ -93,7 +94,7 @@ body {
     font-size: 1.5rem;
     padding: 10px;
     background-color: #000;
-    color: #FF4500; /* Same color as GL Promotions */
+    color: #FF4500;
     border-radius: 25px;
     border: 2px solid #FF4500;
     text-align: center;
@@ -113,27 +114,27 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .website-title {
-        font-size: 1.5rem; /* Shrink title on small screens */
+        font-size: 2rem; /* Adjusted to retain look on smaller screens */
     }
 
     .search-bar {
-        width: 150px; /* Make the search bar smaller */
+        width: 150px; /* Adjust search bar for smaller screens */
     }
 
     .dropdown-content {
         top: 60px;
-        right: 10px; /* Adjust for mobile */
+        right: 10px;
     }
 
     .artists-tab, .concert-tickets-tab {
-        font-size: 1.2rem; /* Smaller font for tabs */
-        width: 90%; /* Full width on small screens */
-        margin: 10px auto; /* Centered and spaced */
+        font-size: 1.3rem; /* Slightly reduce font size for mobile */
+        width: 100%; /* Full width for better fit */
+        margin: 10px 0;
         text-align: center;
     }
 
     .top-bar {
-        flex-direction: column; /* Stack items vertically */
+        flex-direction: column;
         height: auto;
         padding: 10px 0;
     }
