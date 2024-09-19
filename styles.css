@@ -13,7 +13,7 @@ body {
     color: white;
     margin: 0;
     height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 /* Top Bar */
@@ -25,7 +25,7 @@ body {
     background-color: #000; /* Space black */
     display: flex;
     align-items: center;
-    justify-content: center; /* Center horizontally */
+    justify-content: space-between; /* Adjusts for responsive design */
     padding: 0 20px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
     z-index: 10;
@@ -33,15 +33,11 @@ body {
 
 /* Title Styling (GL Promotions) */
 .website-title {
-    font-size: 3rem;
+    font-size: 2rem; /* Adjusted for better scaling */
     color: #FF4500; /* Ruby red mixed with orange */
     font-family: 'hHangus', sans-serif;
     text-shadow: 0px 0px 15px rgba(255, 69, 0, 0.6);
     margin: 0;
-    white-space: nowrap; /* Prevents text wrapping */
-    position: absolute;
-    left: 10%;
-    transform: translateX(-50%); /* Center horizontally */
 }
 
 /* Search Bar */
@@ -56,21 +52,13 @@ body {
     font-size: 1rem;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
     transition: box-shadow 0.3s;
-    position: absolute;
-    right: 377px; /* Align to the right of the container */
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Adjust for centering */
 }
 
-/* Dropdown Menu (Three Lines) */
+/* Dropdown Menu */
 .dropdown-menu {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    position: absolute; /* Use absolute positioning */
-    top: 50%; /* Center vertically */
-    right: 50px; /* Align to the right of the container */
-    transform: translateY(-50%); /* Adjust for centering */
 }
 
 .bar {
@@ -81,26 +69,22 @@ body {
     transition: transform 0.3s;
 }
 
-.big-bar {
-    width: 50px;
-}
-
 /* Dropdown Content */
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 100%; /* Position it below the dropdown menu */
-    right: 0; /* Align it to the right of the dropdown menu */
+    top: 80px; /* Adjusted for fixed top bar */
+    right: 20px;
     background-color: #000;
     color: white;
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    font-family: sans-serif; /* Remove custom font */
+    font-family: sans-serif;
 }
 
 .dropdown-menu.open .dropdown-content {
-    display: block; /* Keep it open on click */
+    display: block; /* Show when clicked */
 }
 
 /* Artists and Concert Tickets Tabs */
@@ -108,46 +92,53 @@ body {
     font-family: 'hHangus', sans-serif;
     font-size: 1.5rem;
     padding: 10px;
-    background-color: #000; /* Tab background color */
+    background-color: #000;
     color: #FF4500; /* Same color as GL Promotions */
-    border-radius: 25px; /* Oval shape */
-    position: absolute;
-    border: 2px solid #FF4500; /* Barbed wire-like border effect */
+    border-radius: 25px;
+    border: 2px solid #FF4500;
     text-align: center;
+    position: relative;
+    display: inline-block;
+    margin: 10px;
 }
 
-.artists-tab {
-    top: 100px; /* Positioned directly below the top bar */
-    left: 20px; /* Positioned to the left of the page */
+/* Main Content */
+.main-content {
+    margin-top: 150px;
+    padding: 20px;
+    background-color: #2d2d2d;
+    min-height: calc(100vh - 150px);
 }
 
-.concert-tickets-tab {
-    top: 160px; /* Positioned under Artists tab */
-    left: 20px; /* Same left alignment */
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .website-title {
+        font-size: 1.5rem; /* Shrink title on small screens */
+    }
 
-/* Barbed wire effect for the tabs */
-.artists-tab::before, .artists-tab::after, 
-.concert-tickets-tab::before, .concert-tickets-tab::after {
-    content: '';
-    display: block;
-    height: 2px;
-    width: 100%;
-    background: repeating-linear-gradient(
-        45deg,
-        #FF4500,
-        #FF4500 5px,
-        transparent 5px,
-        transparent 10px
-    );
-    position: absolute;
-    left: 0;
-}
+    .search-bar {
+        width: 150px; /* Make the search bar smaller */
+    }
 
-.artists-tab::before, .concert-tickets-tab::before {
-    top: 0;
-}
+    .dropdown-content {
+        top: 60px;
+        right: 10px; /* Adjust for mobile */
+    }
 
-.artists-tab::after, .concert-tickets-tab::after {
-    bottom: 0;
+    .artists-tab, .concert-tickets-tab {
+        font-size: 1.2rem; /* Smaller font for tabs */
+        width: 90%; /* Full width on small screens */
+        margin: 10px auto; /* Centered and spaced */
+        text-align: center;
+    }
+
+    .top-bar {
+        flex-direction: column; /* Stack items vertically */
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .dropdown-menu {
+        align-self: flex-end;
+    }
 }
