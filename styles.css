@@ -74,33 +74,64 @@ body {
 }
 
 .bar {
-    width: 35px;
-    height: 4px;
-    background-color: white;
-    margin: 3px 0;
-    transition: transform 0.3s;
+    width: 30px;
+    height: 3px;
+    background-color: #FFF; /* White lines */
+    margin: 5px 0;
+    border-radius: 3px; /* Slightly rounded lines */
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-.big-bar {
-    width: 50px;
+.dropdown-menu.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px); /* Cross effect */
+}
+
+.dropdown-menu.open .bar:nth-child(2) {
+    opacity: 0; /* Hide middle bar */
+}
+
+.dropdown-menu.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px); /* Cross effect */
 }
 
 /* Dropdown Content */
 .dropdown-content {
     display: none;
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease-in-out; /* Fade effect */
     position: absolute;
     top: 100%; /* Position it below the dropdown menu */
     right: 0; /* Align it to the right of the dropdown menu */
-    background-color: #000;
-    color: white;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    font-family: sans-serif; /* Remove custom font */
+    background-color: #333; /* Darker background for contrast */
+    color: #FFF; /* White text color */
+    padding: 15px; /* Increase padding for better spacing */
+    border-radius: 10px; /* Round corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Softer shadow */
+    font-family: 'hHangus', sans-serif; /* Use custom font */
+    z-index: 100; /* Ensure it appears above other elements */
 }
 
 .dropdown-menu.open .dropdown-content {
     display: block; /* Keep it open on click */
+    opacity: 1; /* Show when dropdown is open */
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #FFF; /* White text color */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.dropdown-content a:hover {
+    background-color: #FF4500; /* Highlight background color */
+    color: #FFF; /* Ensure text remains visible */
+    border-radius: 5px; /* Slightly rounded corners on hover */
+}
+
+.dropdown-content a + a {
+    border-top: 1px solid #444; /* Separator line */
 }
 
 /* Artists and Concert Tickets Tabs */
